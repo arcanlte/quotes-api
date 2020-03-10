@@ -9,12 +9,14 @@ const sequelize = new Sequelize({
 });
 
 class Pokemon extends Sequelize.Model {}
-// class Quote extends Sequelize.Model {}
+class Move extends Sequelize.Model {}
 
 Pokemon.init(
   {
     name: Sequelize.STRING,
-    image_url: Sequelize.TEXT
+    frontImage: Sequelize.STRING,
+    backImage: Sequelize.STRING,
+    health: Sequelize.INTEGER
   },
   {
     sequelize,
@@ -22,21 +24,22 @@ Pokemon.init(
   }
 );
 
-// Quote.init(
-//   {
-//     text: Sequelize.TEXT
-//   },
-//   {
-//     sequelize,
-//     modelName: "quote"
-//   }
-// );
+Move.init(
+  {
+    name: Sequelize.TEXT,
+    attack: Sequelize.INTEGER
+  },
+  {
+    sequelize,
+    modelName: "move"
+  }
+);
 
-// Pokemon.hasMany(Quote, { onDelete: "cascade" });
-// Quote.belongsTo(Speaker);
+Pokemon.hasMany(Move, { onDelete: "cascade" });
+Move.belongsTo(Pokemon);
 
 module.exports = {
   Pokemon,
-  // Quote,
+  Move,
   sequelize
 };
