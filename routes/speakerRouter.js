@@ -11,7 +11,7 @@ speakerRouter.get('/', async (req, res) => {
 //show
 speakerRouter.get('/:id', async (req, res) => {
   const id = req.params.id;
-  const speaker = Speaker.findByPk(id);
+  const speaker = await Speaker.findByPk(id);
   res.json({ speaker });
 });
 
