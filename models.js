@@ -27,7 +27,8 @@ Pokemon.init(
 Move.init(
   {
     name: Sequelize.TEXT,
-    attack: Sequelize.INTEGER
+    attack: Sequelize.INTEGER,
+    isLearned: Sequelize.BOOLEAN
   },
   {
     sequelize,
