@@ -1,4 +1,4 @@
-const { Pokemon, Move } = require("./models");
+const { Pokemon, Move, User } = require("./models");
 
 const main = async () => {
   // Delete everything in the database.
@@ -8,6 +8,10 @@ const main = async () => {
   await Move.destroy({
     where: {}
   });
+  // await User.destroy({
+  //   where: {}
+  // });
+
 
   const pokemon1 = await Pokemon.create({
     name: "Bulbasaur",

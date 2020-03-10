@@ -10,6 +10,19 @@ const sequelize = new Sequelize({
 
 class Pokemon extends Sequelize.Model {}
 class Move extends Sequelize.Model {}
+class User extends Sequelize.Model {}
+
+User.init(
+  {
+    username: Sequelize.STRING,
+    password_digest: Sequelize.STRING,
+    trainername: Sequelize.TEXT
+  },
+  {
+    sequelize,
+    modelName: "user"
+  }
+);
 
 Pokemon.init(
   {
