@@ -1,36 +1,42 @@
-const { Sequelize } = require('sequelize');
+const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize({
-  database: 'quotes_db',
-  dialect: 'postgres',
+  database: "pokemon_db",
+  dialect: "postgres",
   define: {
     underscored: true
   }
 });
 
-class Speaker extends Sequelize.Model { }
-class Quote extends Sequelize.Model { }
+class Pokemon extends Sequelize.Model {}
+// class Quote extends Sequelize.Model {}
 
-Speaker.init({
-  name: Sequelize.STRING,
-  image_url: Sequelize.TEXT
-}, {
-  sequelize,
-  modelName: "speaker"
-});
+Pokemon.init(
+  {
+    name: Sequelize.STRING,
+    image_url: Sequelize.TEXT
+  },
+  {
+    sequelize,
+    modelName: "pokemon"
+  }
+);
 
-Quote.init({
-  text: Sequelize.TEXT
-}, {
-  sequelize,
-  modelName: 'quote'
-});
+// Quote.init(
+//   {
+//     text: Sequelize.TEXT
+//   },
+//   {
+//     sequelize,
+//     modelName: "quote"
+//   }
+// );
 
-Speaker.hasMany(Quote, { onDelete: 'cascade' });
-Quote.belongsTo(Speaker);
+// Pokemon.hasMany(Quote, { onDelete: "cascade" });
+// Quote.belongsTo(Speaker);
 
 module.exports = {
-  Speaker,
-  Quote,
+  Pokemon,
+  // Quote,
   sequelize
-}
+};
