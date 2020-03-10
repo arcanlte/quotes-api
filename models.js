@@ -15,8 +15,7 @@ class User extends Sequelize.Model {}
 User.init(
   {
     username: Sequelize.STRING,
-    password_digest: Sequelize.STRING,
-    trainername: Sequelize.TEXT
+    password_digest: Sequelize.STRING
   },
   {
     sequelize,
@@ -49,11 +48,14 @@ Move.init(
   }
 );
 
+User.hasMany(Pokemon, { onDelete: "cascade" });
+Pokemon.belongsTo(User);
 Pokemon.hasMany(Move, { onDelete: "cascade" });
 Move.belongsTo(Pokemon);
 
 module.exports = {
   Pokemon,
   Move,
+  User,
   sequelize
 };

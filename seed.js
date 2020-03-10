@@ -8,10 +8,15 @@ const main = async () => {
   await Move.destroy({
     where: {}
   });
-  // await User.destroy({
-  //   where: {}
-  // });
+  await User.destroy({
+    where: {}
+  });
 
+  const admin = await User.create({
+    username: "admin",
+    password_digest:
+      "$2b$11$J/T6HO7/IHF7TXgu4elqfO.YW6PJIOS9lQdmTQ789Sg7GUPkIer.O"
+  });
 
   const pokemon1 = await Pokemon.create({
     name: "Bulbasaur",
