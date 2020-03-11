@@ -27,7 +27,7 @@ const main = async () => {
     health: 300
   });
 
-  const pokemon2 = await Pokemon.create({
+  const Charmander = await Pokemon.create({
     name: "Charmander",
     frontImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
@@ -36,7 +36,7 @@ const main = async () => {
     health: 300
   });
 
-  const pokemon3 = await Pokemon.create({
+  const Squirtle = await Pokemon.create({
     name: "Squirtle",
     frontImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
