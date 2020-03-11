@@ -27,24 +27,6 @@ const main = async () => {
     health: 300
   });
 
-  const Charmander = await Pokemon.create({
-    name: "Charmander",
-    frontImage:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-    backImage:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png",
-    health: 300
-  });
-
-  const Squirtle = await Pokemon.create({
-    name: "Squirtle",
-    frontImage:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
-    backImage:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/7.png",
-    health: 300
-  });
-
   const move1 = await Move.create({
     name: "Tackle",
     attack: 35,
@@ -81,7 +63,7 @@ const main = async () => {
   await pokemon1.addMove(move3);
   await pokemon1.addMove(move4);
   await pokemon1.addMove(move5);
-  await admin.addPokemon(pokemon1);
+  await admin.addPokemon(pokemon1)
   // await ted.addQuote(quote2);
   // await ted.addQuote(quote3);
   // await ted.addQuote(quote3);

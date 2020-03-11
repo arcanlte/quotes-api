@@ -40,4 +40,12 @@ pokemonRouter.delete("/:id", async (req, res) => {
   res.json({ pokemon });
 });
 
+pokemonRouter.get("/trainer/:trainerid", async (req, res) => {
+  const userId = req.params.trainerid;
+  const pokemon = await Pokemon.findAll({
+    where: { userId }
+  });
+  res.json({ pokemon });
+});
+
 module.exports = pokemonRouter;

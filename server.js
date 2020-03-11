@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 // routes
 app.use("/users", userRouter);
 app.use("/pokemons", pokemonRouter);
-app.use("/moves", moveRouter);
+app.use("/pokemons/:pokemonId/moves", moveRouter);
 
 // error handling
 app.use((err, req, res, next) => {
