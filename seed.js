@@ -63,6 +63,7 @@ const main = async () => {
   await pokemon1.addMove(move3);
   await pokemon1.addMove(move4);
   await pokemon1.addMove(move5);
+  await admin.addPokemon(pokemon1);
   // await ted.addQuote(quote2);
   // await ted.addQuote(quote3);
   // await ted.addQuote(quote3);
