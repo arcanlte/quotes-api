@@ -27,6 +27,24 @@ const main = async () => {
     health: 300
   });
 
+  const pokemon1 = await Pokemon.create({
+    name: "Charmander",
+    frontImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+    backImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png",
+    health: 300
+  });
+
+  const pokemon1 = await Pokemon.create({
+    name: "Bulbasaur",
+    frontImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    backImage:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+    health: 300
+  });
+
   const move1 = await Move.create({
     name: "Tackle",
     attack: 35,
