@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const pokemonRouter = Router();
 const { Pokemon } = require("../models.js");
+const { restrict } = require("../services/auth");
 
 //index
 pokemonRouter.get("/", async (req, res) => {
@@ -16,11 +17,11 @@ pokemonRouter.get("/:id", async (req, res) => {
 });
 
 //create
-pokemonRouter.post("/", async (req, res) => {
-  const data = req.body;
-  const pokemon = await Pokemon.create(data);
-  res.json({ pokemon });
-});
+// pokemonRouter.post("/", async (req, res) => {
+//   const data = req.body;
+//   const pokemon = await Pokemon.create(data);
+//   res.json({ pokemon });
+// });
 
 //update
 pokemonRouter.put("/:id", async (req, res) => {
@@ -46,6 +47,18 @@ pokemonRouter.get("/trainer/:trainerid", async (req, res) => {
     where: { userId }
   });
   res.json({ pokemon });
+});
+
+pokemonRouter.route("/").post(restrict, async (req, res) => {
+  try {
+    const pokemon = await Pokemon.create({
+      ...req.body,
+      userId: res.locals.user.id
+    });
+    res.json(pokemon);
+  } catch (e) {
+    res.json({ error: e.message });
+  }
 });
 
 module.exports = pokemonRouter;
