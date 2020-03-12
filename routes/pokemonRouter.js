@@ -4,8 +4,13 @@ const { Pokemon } = require("../models.js");
 const { restrict } = require("../services/auth");
 
 //index
-pokemonRouter.get("/", async (req, res) => {
+pokemonRouter.get("/pokedex", async (req, res) => {
   const pokemons = await Pokemon.findAll();
+  res.json({ pokemons });
+});
+
+pokemonRouter.get("/trainer", restrict, async (req, res) => {
+  const pokemons = await Pokemon.findByPk(res.locals.user.id);
   res.json({ pokemons });
 });
 
@@ -38,14 +43,6 @@ pokemonRouter.delete("/:id", async (req, res) => {
   const id = req.params.id;
   const pokemon = await Pokemon.findByPk(id);
   await pokemon.destroy();
-  res.json({ pokemon });
-});
-
-pokemonRouter.get("/trainer/:trainerid", async (req, res) => {
-  const userId = req.params.trainerid;
-  const pokemon = await Pokemon.findAll({
-    where: { userId }
-  });
   res.json({ pokemon });
 });
 
