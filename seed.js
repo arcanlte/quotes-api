@@ -1488,6 +1488,12 @@ const main = async () => {
     isLearned: false
   });
 
+  const thunderPunch = await Move.create({
+    name: "Thunder Punch",
+    attack: 55,
+    isLearned: false
+  });
+
   const ironTail = await Move.create({
     name: "Iron Tail",
     attack: 65,
@@ -1575,6 +1581,18 @@ const main = async () => {
   const acid = await Move.create({
     name: "Acid",
     attack: 55,
+    isLearned: false
+  });
+
+  const dragonRage = await Move.create({
+    name: "Dragon Rage",
+    attack: 55,
+    isLearned: false
+  });
+
+  const dragonClaw = await Move.create({
+    name: "Dragon Claw",
+    attack: 75,
     isLearned: false
   });
 
@@ -1683,48 +1701,455 @@ const main = async () => {
   await pokemon118.addMove(tackle);
   await pokemon118.addMove(waterGun);
 
-  await pokemon119.addMove(Tackle);
+  await pokemon119.addMove(tackle);
   await pokemon119.addMove(waterGun);
   await pokemon119.addMove(surf);
 
-  await pokemon120.addMove(Tackle);
+  await pokemon120.addMove(tackle);
   await pokemon120.addMove(waterGun);
 
-  await pokemon121.addMove(Tackle);
+  await pokemon121.addMove(tackle);
   await pokemon121.addMove(waterGun);
   await pokemon121.addMove(quickAttack);
 
-  await pokemon129.addMove(Tackle);
+  await pokemon129.addMove(tackle);
   
   await pokemon130.addMove(tackle);
   await pokemon130.addMove(surf);
   await pokemon130.addMove(takeDown);
   await pokemon130.addMove(hyperBeam);
 
-  await pokemon131.addMove(Tackle);
+  await pokemon131.addMove(tackle);
   await pokemon131.addMove(waterGun);
   await pokemon131.addMove(iceBeam);
   await pokemon131.addMove(blizzard);
 
   await pokemon134.addMove(quickAttack);
   await pokemon134.addMove(waterGun);
-  await pokemon134.addMove(Tackle);
+  await pokemon134.addMove(tackle);
   await pokemon134.addMove(iceBeam);
 
-  await pokemon138.addMove(Tackle);
+  await pokemon138.addMove(tackle);
   await pokemon138.addMove(waterGun);
 
-  await pokemon139.addMove(Tackle);
+  await pokemon139.addMove(tackle);
   await pokemon139.addMove(waterGun);
   await pokemon139.addMove(rockThrow);
   await pokemon139.addMove(waterGun);
 
-  await pokemon140.addMove(Tackle);
+  await pokemon140.addMove(tackle);
   await pokemon140.addMove(waterGun);
 
-  await pokemon141.addMove(Tackle);
+  await pokemon141.addMove(tackle);
   await pokemon141.addMove(waterGun);
   await pokemon141.addMove(rockSlide);
+
+  await pokemon10.addMove();
+
+  await pokemon11.addMove(tackle);
+
+  await pokemon12.addMove(tackle);
+  await pokemon12.addMove(gust);
+  await pokemon12.addMove(solarBeam);
+
+  await pokemon13.addMove(tackle);
+
+  await pokemon14.addMove(tackle);
+
+  await pokemon15.addMove(tackle);
+  await pokemon15.addMove(toxic);
+  await pokemon15.addMove(quickAttack);
+
+  await pokemon16.addMove(tackle);
+
+  await pokemon17.addMove(tackle);
+  await pokemon17.addMove(gust);
+
+  await pokemon18.addMove(tackle);
+  await pokemon18.addMove(gust);
+  await pokemon18.addMove(wingAttack);
+
+  await pokemon19.addMove(tackle);
+
+  await pokemon20.addMove(tackle);
+  await pokemon20.addMove(quickAttack);
+  await pokemon20.addMove(takeDown);
+
+  await pokemon21.addMove(peck);
+
+  await pokemon22.addMove(quickAttack);
+  await pokemon22.addMove(peck);
+  await pokemon22.addMove(wingAttack);
+
+  await pokemon23.addMove(tackle);
+
+  await pokemon24.addMove(tackle);
+  await pokemon24.addMove(toxic);
+  await pokemon24.addMove(acid);
+  
+  await pokemon25.addMove(quickAttack);
+  await pokemon25.addMove(ironTail);
+  await pokemon25.addMove(thundereBolt);
+  await pokemon25.addMove(thunder);
+
+  await pokemon26.addMove(quickAttack);
+  await pokemon26.addMove(ironTail);
+  await pokemon26.addMove(thundereBolt);
+  await pokemon26.addMove(thunder);
+
+  await pokemon27.addMove(tackle);
+  await pokemon27.addMove(rockThrow);
+
+  await pokemon28.addMove(tackle);
+  await pokemon28.addMove(rockThrow);
+  await pokemon28.addMove(earthQuake);
+
+  await pokemon29.addMove(tackle);
+
+  await pokemon30.addMove(tackle);
+  await pokemon30.addMove(toxic);
+
+  await pokemon31.addMove(tackle);
+  await pokemon31.addMove(toxic);
+  await pokemon31.addMove(acid);
+  await pokemon31.addMove(earthQuake);
+
+  await pokemon32.addMove(tackle);
+
+  await pokemon33.addMove(tackle);
+  await pokemon33.addMove(toxic);
+
+  await pokemon34.addMove(tackle);
+  await pokemon34.addMove(toxic);
+  await pokemon34.addMove(acid);
+  await pokemon34.addMove(earthQuake);
+
+  await pokemon35.addMove(tackle);
+
+  await pokemon36.addMove(tackle);
+  await pokemon36.addMove(swift);
+  await pokemon36.addMove(takeDown)
+
+  await pokemon37.addMove(quickAttack);
+  await pokemon37.addMove(ember);
+
+  await pokemon38.addMove(quickAttack);
+  await pokemon38.addMove(ember);
+  await pokemon38.addMove(flameThrower);
+
+  await pokemon39.addMove(tackle);
+
+  await pokemon40.addMove(tackle);
+  await pokemon40.addMove(swift);
+  await pokemon40.addMove(takeDown);
+
+  await pokemon41.addMove(tackle);
+  await pokemon41.addMove(gust);
+
+  await pokemon42.addMove(tackle)
+  await pokemon42.addMove(gust)
+  await pokemon42.addMove(toxic)
+
+  await pokemon43.addMove(tackle)
+
+  await pokemon44.addMove(tackle)
+  await pokemon44.addMove(toxic)
+
+  await pokemon45.addMove(tackle)
+  await pokemon45.addMove(toxic)
+  await pokemon45.addMove(razorLeaf)
+
+  await pokemon46.addMove(tackle)
+
+  await pokemon47.addMove(tackle)
+  await pokemon47.addMove(razorLeaf)
+
+  await pokemon48.addMove(tackle)
+
+  await pokemon49.addMove(tackle)
+  await pokemon49.addMove(toxic)
+  await pokemon49.addMove(quickAttack)
+
+  await pokemon50.addMove(tackle)
+  await pokemon50.addMove(rockThrow)
+
+  await pokemon51.addMove(tackle)
+  await pokemon51.addMove(rockThrow)
+  await pokemon51.addMove(rockSlide)
+
+  await pokemon52.addMove(tackle)
+
+  await pokemon53.addMove(tackle)
+  await pokemon53.addMove(slash)
+  await pokemon53.addMove(quickAttack)
+  
+  await pokemon56.addMove(tackle)
+
+  await pokemon57.addMove(tackle)
+  await pokemon57.addMove(seismicToss)
+  await pokemon57.addMove(quickAttack)
+
+  await pokemon58.addMove(quickAttack)
+  await pokemon58.addMove(ember)
+
+  await pokemon59.addMove(quickAttack)
+  await pokemon59.addMove(ember)
+  await pokemon59.addMove(flameThrower)
+  await pokemon59.addMove(fireBlast)
+
+  await pokemon63.addMove(tackle)
+
+  await pokemon64.addMove(tackle)
+  await pokemon64.addMove(psywave)
+  await pokemon64.addMove(swift)
+
+  await pokemon65.addMove(tackle)
+  await pokemon65.addMove(psywave)
+  await pokemon65.addMove(swift)
+  await pokemon65.addMove(psychic)
+
+  await pokemon66.addMove(tackle)
+
+  await pokemon67.addMove(tackle)
+  await pokemon67.addMove(takeDown)
+  await pokemon67.addMove(quickAttack)
+
+  await pokemon68.addMove(tackle)
+  await pokemon68.addMove(takeDown)
+  await pokemon68.addMove(quickAttack)
+  await pokemon68.addMove(seismicToss)
+
+  await pokemon69.addMove(tackle)
+
+  await pokemon70.addMove(tackle)
+  await pokemon70.addMove(vineWhip)
+
+  await pokemon71.addMove(tackle)
+  await pokemon71.addMove(vineWhip)
+  await pokemon71.addMove(toxic)
+  await pokemon71.addMove(razorLeaf)
+
+  await pokemon74.addMove(tackle)
+
+  await pokemon75.addMove(tackle)
+  await pokemon75.addMove(rockThrow)
+  
+  await pokemon76.addMove(tackle)
+  await pokemon76.addMove(rockThrow)
+  await pokemon76.addMove(rockSlide)
+
+  await pokemon77.addMove(tackle)
+  await pokemon77.addMove(ember)
+
+  await pokemon78.addMove(tackle)
+  await pokemon78.addMove(quickAttack)
+  await pokemon78.addMove(flameThrower)
+
+  await pokemon81.addMove(tackle)
+
+  await pokemon82.addMove(tackle)
+  await pokemon82.addMove(thundereBolt)
+
+  await pokemon83.addMove(tackle)
+  await pokemon83.addMove(quickAttack)
+  await pokemon83.addMove(wingAttack)
+
+  await pokemon84.addMove(tackle)
+  await pokemon84.addMove(quickAttack)
+
+  await pokemon85.addMove(tackle)
+  await pokemon85.addMove(quickAttack)
+  await pokemon85.addMove(wingAttack)
+
+  await pokemon88.addMove(tackle)
+  await pokemon88.addMove(acid)
+
+  await pokemon89.addMove(tackle)
+  await pokemon89.addMove(acid)
+  await pokemon89.addMove(toxic)
+
+  await pokemon92.addMove(tackle)
+
+  await pokemon93.addMove(tackle)
+  await pokemon93.addMove(quickAttack)
+  await pokemon93.addMove(shadowBall)
+
+  await pokemon94.addMove(quickAttack)
+  await pokemon94.addMove(toxic)
+  await pokemon94.addMove(shadowBall)
+
+  await pokemon95.addMove(tackle)
+  await pokemon95.addMove(rockSlide)
+  await pokemon95.addMove(rockThrow)
+
+  await pokemon96.addMove(tackle)
+  await pokemon96.addMove(confusion)
+
+  await pokemon97.addMove(tackle)
+  await pokemon97.addMove(confusion)
+  await pokemon97.addMove(psychic)
+
+  await pokemon100.addMove(tackle)
+  await pokemon100.addMove(swift)
+
+  await pokemon101.addMove(tackle)
+  await pokemon101.addMove(swift)
+  await pokemon101.addMove(thundereBolt)
+
+  await pokemon102.addMove(tackle)
+
+  await pokemon103.addMove(tackle)
+  await pokemon103.addMove(vineWhip)
+  await pokemon103.addMove(confusion)
+  await pokemon103.addMove(psywave)
+
+  await pokemon104.addMove(tackle)
+
+  await pokemon105.addMove(tackle)
+  await pokemon105.addMove(takeDown)
+  await pokemon105.addMove(rockSlide)
+
+  await pokemon106.addMove(tackle)
+  await pokemon106.addMove(thunderPunch)
+  await pokemon106.addMove(icePunch)
+
+  await pokemon107.addMove(tackle)
+  await pokemon107.addMove(quickAttack)
+  await pokemon107.addMove(highJumpKick)
+
+  await pokemon108.addMove(tackle)
+  await pokemon108.addMove(takeDown)
+
+  await pokemon109.addMove(tackle)
+  await pokemon109.addMove(acid)
+
+  await pokemon110.addMove(tackle)
+  await pokemon110.addMove(acid)
+  await pokemon110.addMove(toxic)
+
+  await pokemon111.addMove(tackle)
+  await pokemon111.addMove(rockThrow)
+
+  await pokemon112.addMove(tackle)
+  await pokemon112.addMove(quickAttack)
+  await pokemon112.addMove(rockThrow)
+  await pokemon112.addMove(earthQuake)
+
+  await pokemon113.addMove(tackle)
+  await pokemon113.addMove(takeDown)
+
+  await pokemon114.addMove(tackle)
+  await pokemon114.addMove(vineWhip)
+  await pokemon114.addMove(razorLeaf)
+
+  await pokemon115.addMove(tackle)
+  await pokemon115.addMove(tackle)
+  await pokemon115.addMove(icePunch)
+
+  await pokemon122.addMove(tackle)
+  await pokemon122.addMove(swift)
+  await pokemon122.addMove(psywave)
+
+  await pokemon123.addMove(quickAttack)
+  await pokemon123.addMove(wingAttack)
+  await pokemon123.addMove(slash)
+
+  await pokemon124.addMove(tackle)
+  await pokemon124.addMove(psywave)
+  await pokemon124.addMove(icePunch)
+
+  await pokemon125.addMove(tackle)
+  await pokemon125.addMove(thundereBolt)
+  await pokemon125.addMove(thunderPunch)
+
+  await pokemon126.addMove(tackle)
+  await pokemon126.addMove(ember)
+  await pokemon126.addMove(flameThrower)
+
+  await pokemon127.addMove(tackle)
+  await pokemon127.addMove(swift)
+  await pokemon127.addMove(takeDown)
+
+  await pokemon128.addMove(quickAttack)
+  await pokemon128.addMove(tackle)
+  await pokemon128.addMove(seismicToss)
+
+  await pokemon132.addMove(tackle)
+  await pokemon132.addMove(swift)
+  await pokemon132.addMove(takeDown)
+
+  await pokemon133.addMove(tackle)
+  await pokemon133.addMove(quickAttack)
+
+  await pokemon135.addMove(tackle)
+  await pokemon135.addMove(quickAttack)
+  await pokemon135.addMove(thundereBolt)
+
+  await pokemon136.addMove(tackle)
+  await pokemon136.addMove(quickAttack)
+  await pokemon136.addMove(flameThrower)
+
+  await pokemon137.addMove(tackle)
+  await pokemon137.addMove(swift)
+  await pokemon137.addMove(quickAttack)
+
+  await pokemon142.addMove(tackle)
+  await pokemon142.addMove(wingAttack)
+  await pokemon142.addMove(rockSlide)
+  await pokemon142.addMove(ironTail)
+
+  await pokemon143.addMove(tackle)
+  await pokemon143.addMove(quickAttack)
+  await pokemon143.addMove(seismicToss)
+  await pokemon143.addMove(earthQuake)
+
+  await pokemon144.addMove(quickAttack)
+  await pokemon144.addMove(wingAttack)
+  await pokemon144.addMove(iceBeam)
+  await pokemon144.addMove(skyAttack)
+
+  await pokemon145.addMove(quickAttack)
+  await pokemon145.addMove(wingAttack)
+  await pokemon145.addMove(thundereBolt)
+  await pokemon145.addMove(skyAttack)
+
+  await pokemon146.addMove(quickAttack)
+  await pokemon146.addMove(wingAttack)
+  await pokemon146.addMove(flameThrower)
+  await pokemon146.addMove(skyAttack)
+
+  await pokemon147.addMove(tackle)
+  await pokemon147.addMove(dragonRage)
+
+  await pokemon148.addMove(tackle)
+  await pokemon148.addMove(dragonRage)
+  await pokemon148.addMove(dragonClaw)
+
+  await pokemon149.addMove(dragonRage)
+  await pokemon149.addMove(dragonClaw)
+  await pokemon149.addMove(skyAttack)
+  await pokemon149.addMove(hyperBeam)
+
+  await pokemon150.addMove(swift)
+  await pokemon150.addMove(slash)
+  await pokemon150.addMove(psywave)
+  await pokemon150.addMove(psychic)
+
+  await pokemon151.addMove(quickAttack)
+  await pokemon151.addMove(takeDown)
+  await pokemon151.addMove(psywave)
+  await pokemon151.addMove(psychic)
+
+  
+
+
+
+
+
+  
+
+
+
   // await ted.addQuote(quote2);
   // await ted.addQuote(quote3);
   // await ted.addQuote(quote3);
