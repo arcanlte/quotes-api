@@ -10,7 +10,12 @@ pokemonRouter.get("/pokedex", async (req, res) => {
 });
 
 pokemonRouter.get("/trainer", restrict, async (req, res) => {
-  const pokemons = await Pokemon.findByPk(res.locals.user.id);
+  console.log(res.locals.user.id);
+  const pokemons = await Pokemon.findAll({
+    where: {
+      userId: res.locals.user.id
+    }
+  });
   res.json({ pokemons });
 });
 
