@@ -1368,47 +1368,363 @@ const main = async () => {
     health: 300
   });
 
-
-
-  const move1 = await Move.create({
+  const tackle = await Move.create({
     name: "Tackle",
     attack: 35,
     isLearned: true
   });
 
-  const move2 = await Move.create({
+  const ember = await Move.create({
+    name: "ember",
+    attack: 55,
+    isLearned: true
+  });
+
+  const flameThrower = await Move.create({
+    name: "Flame Thrower",
+    attack: 65,
+    isLearned: true
+  });
+
+  const fireBlast = await Move.create({
+    name: "Fire Blast",
+    attack: 120,
+    isLearned: true
+  });
+
+  const razorLeaf = await Move.create({
     name: "Razor Leaf",
     attack: 65,
     isLearned: true
   });
 
-  const move3 = await Move.create({
+  const vineWhip = await Move.create({
     name: "Vine Whip",
     attack: 55,
     isLearned: true
   });
 
-  const move4 = await Move.create({
+  const solarBeam = await Move.create({
     name: "Solar Beam",
     attack: 120,
     isLearned: false
   });
 
-  const move5 = await Move.create({
+  const waterGun = await Move.create({
+    name: "Water Gun",
+    attack: 55,
+    isLearned: false
+  });
+
+  const surf = await Move.create({
+    name: "Surf",
+    attack: 65,
+    isLearned: false
+  });
+
+  const hydroPump = await Move.create({
+    name: "Hydro Pump",
+    attack: 120,
+    isLearned: false
+  });
+
+  const takeDown = await Move.create({
+    name: "Take Down",
+    attack: 55,
+    isLearned: false
+  });
+
+  const seismicToss = await Move.create({
+    name: "Seismic Toss",
+    attack: 55,
+    isLearned: false
+  });
+
+  const thundereBolt = await Move.create({
+    name: "Thunder Bolt",
+    attack: 65,
+    isLearned: false
+  });
+
+  const thunder = await Move.create({
+    name: "Thunder",
+    attack: 120,
+    isLearned: false
+  });
+
+  const quickAttack = await Move.create({
+    name: "Quick Attack",
+    attack: 45,
+    isLearned: false
+  });
+
+  const swift = await Move.create({
+    name: "Swift",
+    attack: 60,
+    isLearned: false
+  });
+
+  const skyAttack = await Move.create({
+    name: "Sky Attack",
+    attack: 100,
+    isLearned: false
+  });
+
+  const iceBeam = await Move.create({
+    name: "Ice Beam",
+    attack: 100,
+    isLearned: false
+  });
+
+  const blizzard = await Move.create({
+    name: "Blizzard",
+    attack: 120,
+    isLearned: false
+  });
+
+  const icePunch = await Move.create({
+    name: "Ice Punch",
+    attack: 55,
+    isLearned: false
+  });
+
+  const ironTail = await Move.create({
+    name: "Iron Tail",
+    attack: 65,
+    isLearned: false
+  });
+
+  const highJumpKick = await Move.create({
+    name: "High Jump Kick",
+    attack: 90,
+    isLearned: false
+  });
+
+  const psychic = await Move.create({
+    name: "Psychic",
+    attack: 120,
+    isLearned: false
+  });
+
+  const psywave = await Move.create({
+    name: "Psywave",
+    attack: 60,
+    isLearned: false
+  });
+
+  const shadowBall = await Move.create({
+    name: "Shadow Ball",
+    attack: 60,
+    isLearned: false
+  });
+
+  const slash = await Move.create({
+    name: "Slash",
+    attack: 90,
+    isLearned: false
+  });
+
+  const gust = await Move.create({
+    name: "Gust",
+    attack: 65,
+    isLearned: false
+  });
+
+  const wingAttack = await Move.create({
+    name: "Wing Attack",
+    attack: 60,
+    isLearned: false
+  });
+
+  const peck = await Move.create({
+    name: "Peck",
+    attack: 35,
+    isLearned: false
+  });
+
+  const earthQuake = await Move.create({
+    name: "Earth Quake",
+    attack: 120,
+    isLearned: false
+  });
+
+  const rockThrow = await Move.create({
+    name: "Rock Throw",
+    attack: 45,
+    isLearned: false
+  });
+
+  const rockSlide = await Move.create({
+    name: "Rock Slide",
+    attack: 60,
+    isLearned: false
+  });
+
+  const hyperBeam = await Move.create({
     name: "Hyper Beam",
     attack: 150,
     isLearned: false
   });
 
+  const toxic = await Move.create({
+    name: "Toxic",
+    attack: 75,
+    isLearned: false
+  });
+
+  const acid = await Move.create({
+    name: "Acid",
+    attack: 55,
+    isLearned: false
+  });
+
+  const confusion = await Move.create({
+    name: "Confusion",
+    attack: 55,
+    isLearned: false
+  });
+
   // set associations here!
+  // await admin.addPokemon(pokemon1);
+  // await admin.addPokemon(pokemon2);
+  await pokemon1.addMove(tackle);
+  await pokemon1.addMove(vineWhip);
+
+  await pokemon2.addMove(tackle);
+  await pokemon2.addMove(razorLeaf);
+  await pokemon2.addMove(vineWhip);
+
+  await pokemon3.addMove(tackle);
+  await pokemon3.addMove(razorLeaf);
+  await pokemon3.addMove(vineWhip);
+  await pokemon3.addMove(solarBeam);
+
+  await pokemon4.addMove(tackle);
+  await pokemon4.addMove(ember);
+
+  await pokemon5.addMove(tackle);
+  await pokemon5.addMove(ember);
+  await pokemon5.addMove(flameThrower);
+
+  await pokemon6.addMove(tackle);
+  await pokemon6.addMove(ember);
+  await pokemon6.addMove(flameThrower);
+  await pokemon6.addMove(fireBlast);
+
+  await pokemon7.addMove(tackle);
+  await pokemon7.addMove(waterGun);
+
+  await pokemon8.addMove(tackle);
+  await pokemon8.addMove(waterGun);
+  await pokemon8.addMove(surf);
+
+  await pokemon9.addMove(tackle);
+  await pokemon9.addMove(waterGun);
+  await pokemon9.addMove(surf);
+  await pokemon9.addMove(hydroPump);
+
+  await pokemon54.addMove(tackle);
+  await pokemon54.addMove(waterGun);
+
+  await pokemon55.addMove(tackle);
+  await pokemon55.addMove(waterGun);
+  await pokemon55.addMove(confusion);
+  await pokemon55.addMove(surf);
+
+  await pokemon60.addMove(tackle);
+  await pokemon60.addMove(waterGun);
+
+  await pokemon60.addMove(tackle);
+  await pokemon60.addMove(waterGun);
+  await pokemon60.addMove(quickAttack);
+
+  await pokemon61.addMove(tackle);
+  await pokemon61.addMove(waterGun);
+  await pokemon61.addMove(icePunch);
+  await pokemon61.addMove(hydroPump);
+
+  await pokemon72.addMove(tackle);
+  await pokemon72.addMove(acid);
+
+  await pokemon73.addMove(tackle);
+  await pokemon73.addMove(waterGun);
+  await pokemon73.addMove(acid);
+  await pokemon73.addMove(surf);
+
+  await pokemon79.addMove(tackle);
+  await pokemon79.addMove(confusion);
+
+  await pokemon80.addMove(tackle);
+  await pokemon80.addMove(confusion);
+  await pokemon80.addMove(surf);
 
   
-  await pokemon1.addMove(move1);
-  await pokemon1.addMove(move2);
-  await pokemon1.addMove(move3);
-  await pokemon1.addMove(move4);
-  await pokemon1.addMove(move5);
-  // await admin.addPokemon(pokemon1);
+  await pokemon90.addMove(tackle);
+  await pokemon90.addMove(waterGun);
+
+  await pokemon91.addMove(tackle);
+  await pokemon91.addMove(waterGun);
+  await pokemon91.addMove(iceBeam);
+
+  await pokemon98.addMove(tackle);
+  await pokemon98.addMove(waterGun);
+
+  await pokemon99.addMove(tackle);
+  await pokemon99.addMove(waterGun);
+  await pokemon99.addMove(quickAttack);
+
+  await pokemon117.addMove(tackle);
+  await pokemon117.addMove(waterGun);
+  await pokemon117.addMove(surf);
+
+  await pokemon116.addMove(tackle);
+  await pokemon116.addMove(waterGun);
+
+  await pokemon118.addMove(tackle);
+  await pokemon118.addMove(waterGun);
+
+  await pokemon119.addMove(Tackle);
+  await pokemon119.addMove(waterGun);
+  await pokemon119.addMove(surf);
+
+  await pokemon120.addMove(Tackle);
+  await pokemon120.addMove(waterGun);
+
+  await pokemon121.addMove(Tackle);
+  await pokemon121.addMove(waterGun);
+  await pokemon121.addMove(quickAttack);
+
+  await pokemon129.addMove(Tackle);
+  
+  await pokemon130.addMove(tackle);
+  await pokemon130.addMove(surf);
+  await pokemon130.addMove(takeDown);
+  await pokemon130.addMove(hyperBeam);
+
+  await pokemon131.addMove(Tackle);
+  await pokemon131.addMove(waterGun);
+  await pokemon131.addMove(iceBeam);
+  await pokemon131.addMove(blizzard);
+
+  await pokemon134.addMove(quickAttack);
+  await pokemon134.addMove(waterGun);
+  await pokemon134.addMove(Tackle);
+  await pokemon134.addMove(iceBeam);
+
+  await pokemon138.addMove(Tackle);
+  await pokemon138.addMove(waterGun);
+
+  await pokemon139.addMove(Tackle);
+  await pokemon139.addMove(waterGun);
+  await pokemon139.addMove(rockThrow);
+  await pokemon139.addMove(waterGun);
+
+  await pokemon140.addMove(Tackle);
+  await pokemon140.addMove(waterGun);
+
+  await pokemon141.addMove(Tackle);
+  await pokemon141.addMove(waterGun);
+  await pokemon141.addMove(rockSlide);
   // await ted.addQuote(quote2);
   // await ted.addQuote(quote3);
   // await ted.addQuote(quote3);
