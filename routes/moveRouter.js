@@ -9,6 +9,7 @@ const { Move, Pokemon } = require("../models.js");
 //index
 moveRouter.get("/", async (req, res) => {
   const pokemonId = req.params.pokemonId;
+  console.log(pokemonId)
   const moves = await Move.findAll({
     where: {
       pokemonId
