@@ -1379,28 +1379,35 @@ const main = async () => {
 
   const tackle = [];
   const ember = [];
+  const flameThrower = [];
 
   for (let i = 0; i <= 151; i++) {
+
     const j = await Move.create({
       name: "Tackle",
       attack: 35,
       isLearned: true
     });
+
     const k = await Move.create({
       name: "ember",
       attack: 55,
       isLearned: true
     });
+
+    const l = await Move.create({
+      name: "Flame Thrower",
+      attack: 65,
+      isLearned: true
+    });
+
+
     tackle.push(j);
     ember.push(k);
+    flameThrower.push(l)
   }
 
 
-  const flameThrower = await Move.create({
-    name: "Flame Thrower",
-    attack: 65,
-    isLearned: true
-  });
 
   const fireBlast = await Move.create({
     name: "Fire Blast",
@@ -1638,11 +1645,11 @@ const main = async () => {
 
   await pokemon5.addMove(tackle[4]);
   await pokemon5.addMove(ember[2]);
-  await pokemon5.addMove(flameThrower);
+  await pokemon5.addMove(flameThrower[1]);
 
   await pokemon6.addMove(tackle[5]);
   await pokemon6.addMove(ember[3]);
-  await pokemon6.addMove(flameThrower);
+  await pokemon6.addMove(flameThrower[2]);
   await pokemon6.addMove(fireBlast);
 
   await pokemon7.addMove(tackle[6]);
@@ -1850,7 +1857,7 @@ const main = async () => {
 
   await pokemon38.addMove(quickAttack);
   await pokemon38.addMove(ember[5]);
-  await pokemon38.addMove(flameThrower);
+  await pokemon38.addMove(flameThrower[3]);
 
   await pokemon39.addMove(tackle[58]);
 
@@ -1909,7 +1916,7 @@ const main = async () => {
 
   await pokemon59.addMove(quickAttack);
   await pokemon59.addMove(ember[7]);
-  await pokemon59.addMove(flameThrower);
+  await pokemon59.addMove(flameThrower[4]);
   await pokemon59.addMove(fireBlast);
 
   await pokemon63.addMove(tackle[75]);
@@ -1958,7 +1965,7 @@ const main = async () => {
 
   await pokemon78.addMove(tackle[88]);
   await pokemon78.addMove(quickAttack);
-  await pokemon78.addMove(flameThrower);
+  await pokemon78.addMove(flameThrower[5]);
 
   await pokemon81.addMove(tackle[89]);
 
@@ -2087,7 +2094,7 @@ const main = async () => {
 
   await pokemon126.addMove(tackle[122]);
   await pokemon126.addMove(ember[9]);
-  await pokemon126.addMove(flameThrower);
+  await pokemon126.addMove(flameThrower[6]);
 
   await pokemon127.addMove(tackle[123]);
   await pokemon127.addMove(swift);
@@ -2110,7 +2117,7 @@ const main = async () => {
 
   await pokemon136.addMove(tackle[128]);
   await pokemon136.addMove(quickAttack);
-  await pokemon136.addMove(flameThrower);
+  await pokemon136.addMove(flameThrower[7]);
 
   await pokemon137.addMove(tackle[129]);
   await pokemon137.addMove(swift);
@@ -2138,7 +2145,7 @@ const main = async () => {
 
   await pokemon146.addMove(quickAttack);
   await pokemon146.addMove(wingAttack);
-  await pokemon146.addMove(flameThrower);
+  await pokemon146.addMove(flameThrower[8]);
   await pokemon146.addMove(skyAttack);
 
   await pokemon147.addMove(tackle[132]);
