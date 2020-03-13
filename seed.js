@@ -1423,13 +1423,13 @@ const main = async () => {
       isLearned: false
     });
 
-    const surf = await Move.create({
+    const p = await Move.create({
       name: "Surf",
       attack: 65,
       isLearned: false
     });
 
-    const takeDown = await Move.create({
+    const q = await Move.create({
       name: "Take Down",
       attack: 55,
       isLearned: false
