@@ -1385,6 +1385,8 @@ const main = async () => {
   const waterGun = [];
   const surf = [];
   const takeDown = [];
+  const thundereBolt = [];
+  const quickAttack = []
 
   for (let i = 0; i <= 139; i++) {
     const j = await Move.create({
@@ -1420,19 +1422,31 @@ const main = async () => {
     const o = await Move.create({
       name: "Water Gun",
       attack: 55,
-      isLearned: false
+      isLearned: true
     });
 
     const p = await Move.create({
       name: "Surf",
       attack: 65,
-      isLearned: false
+      isLearned: true
     });
 
     const q = await Move.create({
       name: "Take Down",
       attack: 55,
-      isLearned: false
+      isLearned: true
+    });
+
+    const r = await Move.create({
+      name: "Thunder Bolt",
+      attack: 65,
+      isLearned: true
+    });
+
+    const s = await Move.create({
+      name: "Quick Attack",
+      attack: 45,
+      isLearned: true
     });
 
     tackle.push(j);
@@ -1442,7 +1456,10 @@ const main = async () => {
     vineWhip.push(n);
     waterGun.push(o);
     surf.push(p);
-    takeDown.push(q)
+    takeDown.push(q);
+    thundereBolt.push(r);
+    quickAttack.push(s);
+
   }
 
   const fireBlast = await Move.create({
@@ -1463,7 +1480,6 @@ const main = async () => {
     isLearned: false
   });
 
-
   const hydroPump = await Move.create({
     name: "Hydro Pump",
     attack: 120,
@@ -1482,9 +1498,21 @@ const main = async () => {
     isLearned: false
   });
 
-  const thundereBolt = await Move.create({
-    name: "Thunder Bolt",
-    attack: 65,
+  const seismicToss1 = await Move.create({
+    name: "Seismic Toss",
+    attack: 55,
+    isLearned: false
+  });
+
+  const seismicToss2 = await Move.create({
+    name: "Seismic Toss",
+    attack: 55,
+    isLearned: false
+  });
+
+  const seismicToss3 = await Move.create({
+    name: "Seismic Toss",
+    attack: 55,
     isLearned: false
   });
 
@@ -1494,11 +1522,12 @@ const main = async () => {
     isLearned: false
   });
 
-  const quickAttack = await Move.create({
-    name: "Quick Attack",
-    attack: 45,
-    isLearned: false
+  const thunder1 = await Move.create({
+    name: "Thunder",
+    attack: 120,
+    isLearned: true
   });
+
 
   const swift = await Move.create({
     name: "Swift",
@@ -1696,7 +1725,7 @@ const main = async () => {
 
   await pokemon60.addMove(tackle[12]);
   await pokemon60.addMove(waterGun[6]);
-  await pokemon60.addMove(quickAttack);
+  await pokemon60.addMove(quickAttack[0]);
 
   await pokemon61.addMove(tackle[13]);
   await pokemon61.addMove(waterGun[7]);
@@ -1730,7 +1759,7 @@ const main = async () => {
 
   await pokemon99.addMove(tackle[21]);
   await pokemon99.addMove(waterGun[12]);
-  await pokemon99.addMove(quickAttack);
+  await pokemon99.addMove(quickAttack[1]);
 
   await pokemon117.addMove(tackle[22]);
   await pokemon117.addMove(waterGun[13]);
@@ -1751,7 +1780,7 @@ const main = async () => {
 
   await pokemon121.addMove(tackle[27]);
   await pokemon121.addMove(waterGun[18]);
-  await pokemon121.addMove(quickAttack);
+  await pokemon121.addMove(quickAttack[2]);
 
   await pokemon129.addMove(tackle[28]);
 
@@ -1765,7 +1794,7 @@ const main = async () => {
   await pokemon131.addMove(iceBeam);
   await pokemon131.addMove(blizzard);
 
-  await pokemon134.addMove(quickAttack);
+  await pokemon134.addMove(quickAttack[3]);
   await pokemon134.addMove(waterGun[20]);
   await pokemon134.addMove(tackle[31]);
   await pokemon134.addMove(iceBeam);
@@ -1798,7 +1827,7 @@ const main = async () => {
 
   await pokemon15.addMove(tackle[40]);
   await pokemon15.addMove(toxic);
-  await pokemon15.addMove(quickAttack);
+  await pokemon15.addMove(quickAttack[4]);
 
   await pokemon16.addMove(tackle[41]);
 
@@ -1812,12 +1841,12 @@ const main = async () => {
   await pokemon19.addMove(tackle[44]);
 
   await pokemon20.addMove(tackle[45]);
-  await pokemon20.addMove(quickAttack);
+  await pokemon20.addMove(quickAttack[5]);
   await pokemon20.addMove(takeDown[1]);
 
   await pokemon21.addMove(peck);
 
-  await pokemon22.addMove(quickAttack);
+  await pokemon22.addMove(quickAttack[6]);
   await pokemon22.addMove(peck);
   await pokemon22.addMove(wingAttack);
 
@@ -1827,15 +1856,15 @@ const main = async () => {
   await pokemon24.addMove(toxic);
   await pokemon24.addMove(acid);
 
-  await pokemon25.addMove(quickAttack);
+  await pokemon25.addMove(quickAttack[7]);
   await pokemon25.addMove(ironTail);
   await pokemon25.addMove(thundereBolt);
   await pokemon25.addMove(thunder);
 
-  await pokemon26.addMove(quickAttack);
+  await pokemon26.addMove(quickAttack[8]);
   await pokemon26.addMove(ironTail);
   await pokemon26.addMove(thundereBolt);
-  await pokemon26.addMove(thunder);
+  await pokemon26.addMove(thunder1);
 
   await pokemon27.addMove(tackle[48]);
   await pokemon27.addMove(rockThrow);
@@ -1870,10 +1899,10 @@ const main = async () => {
   await pokemon36.addMove(swift);
   await pokemon36.addMove(takeDown[2]);
 
-  await pokemon37.addMove(quickAttack);
+  await pokemon37.addMove(quickAttack[9]);
   await pokemon37.addMove(ember[4]);
 
-  await pokemon38.addMove(quickAttack);
+  await pokemon38.addMove(quickAttack[10]);
   await pokemon38.addMove(ember[5]);
   await pokemon38.addMove(flameThrower[3]);
 
@@ -1908,7 +1937,7 @@ const main = async () => {
 
   await pokemon49.addMove(tackle[68]);
   await pokemon49.addMove(toxic);
-  await pokemon49.addMove(quickAttack);
+  await pokemon49.addMove(quickAttack[11]);
 
   await pokemon50.addMove(tackle[69]);
   await pokemon50.addMove(rockThrow);
@@ -1921,18 +1950,18 @@ const main = async () => {
 
   await pokemon53.addMove(tackle[72]);
   await pokemon53.addMove(slash);
-  await pokemon53.addMove(quickAttack);
+  await pokemon53.addMove(quickAttack[12]);
 
   await pokemon56.addMove(tackle[73]);
 
   await pokemon57.addMove(tackle[74]);
   await pokemon57.addMove(seismicToss);
-  await pokemon57.addMove(quickAttack);
+  await pokemon57.addMove(quickAttack[13]);
 
-  await pokemon58.addMove(quickAttack);
+  await pokemon58.addMove(quickAttack[14]);
   await pokemon58.addMove(ember[6]);
 
-  await pokemon59.addMove(quickAttack);
+  await pokemon59.addMove(quickAttack[15]);
   await pokemon59.addMove(ember[7]);
   await pokemon59.addMove(flameThrower[4]);
   await pokemon59.addMove(fireBlast);
@@ -1952,12 +1981,12 @@ const main = async () => {
 
   await pokemon67.addMove(tackle[79]);
   await pokemon67.addMove(takeDown[4]);
-  await pokemon67.addMove(quickAttack);
+  await pokemon67.addMove(quickAttack[16]);
 
   await pokemon68.addMove(tackle[80]);
   await pokemon68.addMove(takeDown[5]);
-  await pokemon68.addMove(quickAttack);
-  await pokemon68.addMove(seismicToss);
+  await pokemon68.addMove(quickAttack[17]);
+  await pokemon68.addMove(seismicToss1);
 
   await pokemon69.addMove(tackle[81]);
 
@@ -1982,7 +2011,7 @@ const main = async () => {
   await pokemon77.addMove(ember[8]);
 
   await pokemon78.addMove(tackle[88]);
-  await pokemon78.addMove(quickAttack);
+  await pokemon78.addMove(quickAttack[18]);
   await pokemon78.addMove(flameThrower[5]);
 
   await pokemon81.addMove(tackle[89]);
@@ -1991,14 +2020,14 @@ const main = async () => {
   await pokemon82.addMove(thundereBolt);
 
   await pokemon83.addMove(tackle[91]);
-  await pokemon83.addMove(quickAttack);
+  await pokemon83.addMove(quickAttack[19]);
   await pokemon83.addMove(wingAttack);
 
   await pokemon84.addMove(tackle[92]);
-  await pokemon84.addMove(quickAttack);
+  await pokemon84.addMove(quickAttack[20]);
 
   await pokemon85.addMove(tackle[93]);
-  await pokemon85.addMove(quickAttack);
+  await pokemon85.addMove(quickAttack[21]);
   await pokemon85.addMove(wingAttack);
 
   await pokemon86.addMove(tackle[94]);
@@ -2019,10 +2048,10 @@ const main = async () => {
   await pokemon92.addMove(tackle[98]);
 
   await pokemon93.addMove(tackle[99]);
-  await pokemon93.addMove(quickAttack);
+  await pokemon93.addMove(quickAttack[22]);
   await pokemon93.addMove(shadowBall);
 
-  await pokemon94.addMove(quickAttack);
+  await pokemon94.addMove(quickAttack[23]);
   await pokemon94.addMove(toxic);
   await pokemon94.addMove(shadowBall);
 
@@ -2062,7 +2091,7 @@ const main = async () => {
   await pokemon106.addMove(icePunch);
 
   await pokemon107.addMove(tackle[110]);
-  await pokemon107.addMove(quickAttack);
+  await pokemon107.addMove(quickAttack[24]);
   await pokemon107.addMove(highJumpKick);
 
   await pokemon108.addMove(tackle[111]);
@@ -2079,7 +2108,7 @@ const main = async () => {
   await pokemon111.addMove(rockThrow);
 
   await pokemon112.addMove(tackle[115]);
-  await pokemon112.addMove(quickAttack);
+  await pokemon112.addMove(quickAttack[25]);
   await pokemon112.addMove(rockThrow);
   await pokemon112.addMove(earthQuake);
 
@@ -2091,14 +2120,14 @@ const main = async () => {
   await pokemon114.addMove(razorLeaf[6]);
 
   await pokemon115.addMove(tackle[118]);
-  await pokemon115.addMove(quickAttack);
+  await pokemon115.addMove(quickAttack[26]);
   await pokemon115.addMove(icePunch);
 
   await pokemon122.addMove(tackle[119]);
   await pokemon122.addMove(swift);
   await pokemon122.addMove(psywave);
 
-  await pokemon123.addMove(quickAttack);
+  await pokemon123.addMove(quickAttack[27]);
   await pokemon123.addMove(wingAttack);
   await pokemon123.addMove(slash);
 
@@ -2118,28 +2147,28 @@ const main = async () => {
   await pokemon127.addMove(swift);
   await pokemon127.addMove(takeDown[9]);
 
-  await pokemon128.addMove(quickAttack);
+  await pokemon128.addMove(quickAttack[28]);
   await pokemon128.addMove(tackle[124]);
-  await pokemon128.addMove(seismicToss);
+  await pokemon128.addMove(seismicToss2);
 
   await pokemon132.addMove(tackle[125]);
   await pokemon132.addMove(swift);
   await pokemon132.addMove(takeDown[10]);
 
   await pokemon133.addMove(tackle[126]);
-  await pokemon133.addMove(quickAttack);
+  await pokemon133.addMove(quickAttack[29]);
 
   await pokemon135.addMove(tackle[127]);
-  await pokemon135.addMove(quickAttack);
+  await pokemon135.addMove(quickAttack[30]);
   await pokemon135.addMove(thundereBolt);
 
   await pokemon136.addMove(tackle[128]);
-  await pokemon136.addMove(quickAttack);
+  await pokemon136.addMove(quickAttack[31]);
   await pokemon136.addMove(flameThrower[7]);
 
   await pokemon137.addMove(tackle[129]);
   await pokemon137.addMove(swift);
-  await pokemon137.addMove(quickAttack);
+  await pokemon137.addMove(quickAttack[39]);
 
   await pokemon142.addMove(tackle[130]);
   await pokemon142.addMove(wingAttack);
@@ -2147,21 +2176,21 @@ const main = async () => {
   await pokemon142.addMove(ironTail);
 
   await pokemon143.addMove(tackle[131]);
-  await pokemon143.addMove(quickAttack);
-  await pokemon143.addMove(seismicToss);
+  await pokemon143.addMove(quickAttack[32]);
+  await pokemon143.addMove(seismicToss3);
   await pokemon143.addMove(earthQuake);
 
-  await pokemon144.addMove(quickAttack);
+  await pokemon144.addMove(quickAttack[33]);
   await pokemon144.addMove(wingAttack);
   await pokemon144.addMove(iceBeam);
   await pokemon144.addMove(skyAttack);
 
-  await pokemon145.addMove(quickAttack);
+  await pokemon145.addMove(quickAttack[34]);
   await pokemon145.addMove(wingAttack);
   await pokemon145.addMove(thundereBolt);
   await pokemon145.addMove(skyAttack);
 
-  await pokemon146.addMove(quickAttack);
+  await pokemon146.addMove(quickAttack[35]);
   await pokemon146.addMove(wingAttack);
   await pokemon146.addMove(flameThrower[8]);
   await pokemon146.addMove(skyAttack);
@@ -2183,7 +2212,7 @@ const main = async () => {
   await pokemon150.addMove(psywave);
   await pokemon150.addMove(psychic);
 
-  await pokemon151.addMove(quickAttack);
+  await pokemon151.addMove(quickAttack[36]);
   await pokemon151.addMove(takeDown[11]);
   await pokemon151.addMove(psywave);
   await pokemon151.addMove(psychic);
