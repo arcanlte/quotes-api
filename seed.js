@@ -1380,9 +1380,9 @@ const main = async () => {
   const tackle = [];
   const ember = [];
   const flameThrower = [];
+  const razorLeaf = [];
 
   for (let i = 0; i <= 151; i++) {
-
     const j = await Move.create({
       name: "Tackle",
       attack: 35,
@@ -1401,23 +1401,21 @@ const main = async () => {
       isLearned: true
     });
 
+    const m = await Move.create({
+      name: "Razor Leaf",
+      attack: 65,
+      isLearned: true
+    });
 
     tackle.push(j);
     ember.push(k);
-    flameThrower.push(l)
+    flameThrower.push(l);
+    razorLeaf.push(m);
   }
-
-
 
   const fireBlast = await Move.create({
     name: "Fire Blast",
     attack: 120,
-    isLearned: true
-  });
-
-  const razorLeaf = await Move.create({
-    name: "Razor Leaf",
-    attack: 65,
     isLearned: true
   });
 
@@ -1632,11 +1630,11 @@ const main = async () => {
   await pokemon1.addMove(vineWhip);
 
   await pokemon2.addMove(tackle[1]);
-  await pokemon2.addMove(razorLeaf);
+  await pokemon2.addMove(razorLeaf[1]);
   await pokemon2.addMove(vineWhip);
 
   await pokemon3.addMove(tackle[2]);
-  await pokemon3.addMove(razorLeaf);
+  await pokemon3.addMove(razorLeaf[2]);
   await pokemon3.addMove(vineWhip);
   await pokemon3.addMove(solarBeam);
 
@@ -1879,12 +1877,12 @@ const main = async () => {
 
   await pokemon45.addMove(tackle[64]);
   await pokemon45.addMove(toxic);
-  await pokemon45.addMove(razorLeaf);
+  await pokemon45.addMove(razorLeaf[3]);
 
   await pokemon46.addMove(tackle[65]);
 
   await pokemon47.addMove(tackle[66]);
-  await pokemon47.addMove(razorLeaf);
+  await pokemon47.addMove(razorLeaf[4]);
 
   await pokemon48.addMove(tackle[67]);
 
@@ -1949,7 +1947,7 @@ const main = async () => {
   await pokemon71.addMove(tackle[83]);
   await pokemon71.addMove(vineWhip);
   await pokemon71.addMove(toxic);
-  await pokemon71.addMove(razorLeaf);
+  await pokemon71.addMove(razorLeaf[5]);
 
   await pokemon74.addMove(tackle[84]);
 
@@ -2070,7 +2068,7 @@ const main = async () => {
 
   await pokemon114.addMove(tackle[117]);
   await pokemon114.addMove(vineWhip);
-  await pokemon114.addMove(razorLeaf);
+  await pokemon114.addMove(razorLeaf[6]);
 
   await pokemon115.addMove(tackle[118]);
   await pokemon115.addMove(quickAttack);
