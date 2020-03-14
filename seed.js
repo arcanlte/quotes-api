@@ -1393,7 +1393,7 @@ const main = async () => {
   const wingAttack = [];
   const toxic = [];
   const acid = [];
-  const confusion = [] 
+  const confusion = [];
 
   for (let i = 0; i <= 139; i++) {
     const j = await Move.create({
@@ -1402,6 +1402,28 @@ const main = async () => {
       isLearned: true
     });
 
+    tackle.push(j);
+  }
+  for (let i = 0; i <= 36; i++) {
+    const s = await Move.create({
+      name: "Quick Attack",
+      attack: 45,
+      isLearned: true
+    });
+
+    quickAttack.push(s);
+  }
+
+  for (let i = 0; i < 26; i++) {
+    const o = await Move.create({
+      name: "Water Gun",
+      attack: 55,
+      isLearned: true
+    });
+    waterGun.push(o);
+  }
+
+  for (let i = 0; i < 15; i++) {
     const k = await Move.create({
       name: "ember",
       attack: 55,
@@ -1426,12 +1448,6 @@ const main = async () => {
       isLearned: true
     });
 
-    const o = await Move.create({
-      name: "Water Gun",
-      attack: 55,
-      isLearned: true
-    });
-
     const p = await Move.create({
       name: "Surf",
       attack: 65,
@@ -1447,12 +1463,6 @@ const main = async () => {
     const r = await Move.create({
       name: "Thunder Bolt",
       attack: 65,
-      isLearned: true
-    });
-
-    const s = await Move.create({
-      name: "Quick Attack",
-      attack: 45,
       isLearned: true
     });
 
@@ -1498,23 +1508,20 @@ const main = async () => {
       isLearned: false
     });
 
-    tackle.push(j);
     ember.push(k);
     flameThrower.push(l);
     razorLeaf.push(m);
     vineWhip.push(n);
-    waterGun.push(o);
     surf.push(p);
     takeDown.push(q);
     thundereBolt.push(r);
-    quickAttack.push(s);
     swift.push(t);
     psywave.push(u);
     rockThrow.push(v);
     wingAttack.push(w);
     toxic.push(x);
     acid.push(y);
-    confusion.push(z)
+    confusion.push(z);
   }
 
   const fireBlast = await Move.create({
@@ -1912,7 +1919,6 @@ const main = async () => {
     attack: 75,
     isLearned: false
   });
-
 
   // set associations here!
   // await admin.addPokemon(pokemon1);
